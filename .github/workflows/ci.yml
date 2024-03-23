@@ -1,0 +1,36 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Linting
+        run: npm run lint
+
+  build-and-push:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t node-hello-world .
+
+      - name: Push Docker image to registry
+        uses: docker/login-action@v1
+        with:
+          username: abdulrahman101
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - run: docker push abdulrahman101/node-hello-world
