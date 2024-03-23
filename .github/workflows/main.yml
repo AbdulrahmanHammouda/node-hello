@@ -26,8 +26,7 @@ jobs:
       - name: Linting
         run: npm run lint
 
-      - name: Code Formatting
-        run: npm run format
+      
 
       - name: Build Docker image
         run: docker build -t abdulrahman101/node-hello-world .
