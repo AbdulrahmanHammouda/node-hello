@@ -1,1 +1,2 @@
 .DS_Store
+.terraform/providers/registry.terraform.io/ibm-cloud/ibm/1.63.0/windows_amd64/terraform-provider-ibm_v1.63.0.exe
