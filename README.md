@@ -33,7 +33,8 @@ Each of these tasks contributes to the overall goal of streamlining the developm
 ```bash
 git clone <repository_url>
 cd <repository_name>
-
+```
+ذذذ
 ## Installation
 
 1. **Install Docker and Terraform**: Follow the official installation instructions for your operating system to install Docker and Terraform.
@@ -50,11 +51,13 @@ To deploy the application using Docker, follow these steps:
    
    ```bash
    docker build -t <image_name> .
+```
 
 2. **Run Docker Container**: Run the Docker container using the following command:
 
     ```bash
     docker run -d -p 3000:3000 --name <container_name> <image_name>
+```
 
 ### Using Terraform
 
@@ -64,16 +67,19 @@ To deploy the application using Terraform, follow these steps:
    
    ```bash
    terraform init
+   ```
 
 2. **Plan Deployment**: Plan the deployment by executing the command below:
 
     ```bash
     terraform plan
+    ```
 
 3. **Apply Deployment**: Apply the deployment with the following command:
 
     ```bash
     terraform apply
+    ```
 
 ## Monitoring and Logging
 
