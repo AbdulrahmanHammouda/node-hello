@@ -9,6 +9,6 @@ module.exports = {
         "ecmaVersion": 12
     },
     "rules": {
-        // Define your ESLint rules here
+        
     }
 };
