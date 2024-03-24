@@ -52,12 +52,13 @@ To deploy the application using Docker, follow these steps:
    ```bash
    docker build -t <image_name> .
 ```
+```
 
 2. **Run Docker Container**: Run the Docker container using the following command:
 
     ```bash
     docker run -d -p 3000:3000 --name <container_name> <image_name>
-```
+``
 
 ### Using Terraform
 
